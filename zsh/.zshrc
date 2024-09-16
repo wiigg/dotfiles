@@ -70,19 +70,15 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git 
+	 zsh-autosuggestions
+	 zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# SMLNJ
-export PATH="/usr/local/smlnj/bin:$PATH"
-
-# brew
-export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -107,10 +103,5 @@ export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
 alias vi=nvim
+
 source /Users/dawigg/.config/op/plugins.sh
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-export GEM_HOME="/opt/homebrew/lib/ruby/gems/3.3.0/bin"
-export GEM_PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin"
-export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
-export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
-export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
