@@ -103,3 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
 alias vi=nvim
+
+# op plugins, i.e. api keys
+if [ -f "$HOME/.config/op/plugins.sh" ]; then
+    source "$HOME/.config/op/plugins.sh"
+fi
