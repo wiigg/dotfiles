@@ -103,5 +103,3 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim=nvim
 alias vi=nvim
-
-source /Users/dawigg/.config/op/plugins.sh
