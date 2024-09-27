@@ -104,6 +104,8 @@ source $ZSH/oh-my-zsh.sh
 alias vim=nvim
 alias vi=nvim
 
+alias py=python3
+
 # op plugins, i.e. api keys
 if [ -f "$HOME/.config/op/plugins.sh" ]; then
     source "$HOME/.config/op/plugins.sh"
