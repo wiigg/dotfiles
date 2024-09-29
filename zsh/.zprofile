@@ -7,6 +7,9 @@ export SSH_AUTH_SOCK="~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/age
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
 
+# python
+export PATH="/opt/homebrew/opt/python@3.12/libexec/bin:$PATH"
+
 # smlnj
 export PATH="/usr/local/smlnj/bin:$PATH"
 
