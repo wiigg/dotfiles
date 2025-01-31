@@ -36,6 +36,14 @@ alias vim=nvim
 alias vi=nvim
 alias py=python3
 
+alias rm='rm -i'
+
+alias gs='git status'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gp='git push'
+alias gl='git pull'
+
 # 1P plugins
 if [ -f "$HOME/.config/op/plugins.sh" ]; then
     source "$HOME/.config/op/plugins.sh"
