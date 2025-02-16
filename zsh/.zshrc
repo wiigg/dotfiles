@@ -23,8 +23,9 @@ export PATH="/usr/local/smlnj/bin:$PATH"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 # Ruby gem paths
-export GEM_HOME="/opt/homebrew/lib/ruby/gems/3.3.0/bin"
-export GEM_PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin"
+export GEM_HOME="/opt/homebrew/lib/ruby/gems/3.3.0"
+export GEM_PATH="/opt/homebrew/lib/ruby/gems/3.3.0"
+export PATH="$GEM_HOME/bin:$PATH"
 
 # Tcl/Tk env vars
 export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
