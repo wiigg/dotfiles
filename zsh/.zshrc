@@ -2,30 +2,34 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
-# Plugins
 plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
-# Load Oh My Zsh
 source $ZSH/oh-my-zsh.sh
-
-# User config
 
 export EDITOR="nvim"
 
 # Paths
-export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
-export PATH="/opt/homebrew/opt/python@3.12/libexec/bin:$PATH"
-export PATH="/usr/local/smlnj/bin:$PATH"
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+add_to_path() {
+  case ":$PATH:" in
+    *":$1:"*) ;;
+    *) export PATH="$1:$PATH" ;;
+  esac
+}
+
+add_to_path "/opt/homebrew/opt/make/libexec/gnubin"
+add_to_path "/opt/homebrew/opt/python@3.13/libexec/bin"
+add_to_path "/usr/local/smlnj/bin"
+add_to_path "/opt/homebrew/opt/ruby/bin"
+add_to_path "$HOME/.local/bin"
+add_to_path "$GEM_HOME/bin"
 
 # Ruby gem paths
-export GEM_HOME="/opt/homebrew/lib/ruby/gems/3.3.0"
-export GEM_PATH="/opt/homebrew/lib/ruby/gems/3.3.0"
-export PATH="$GEM_HOME/bin:$PATH"
+export GEM_HOME="/opt/homebrew/lib/ruby/gems/3.4.0"
+export GEM_PATH="/opt/homebrew/lib/ruby/gems/3.4.0"
 
 # Tcl/Tk env vars
 export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
@@ -37,8 +41,6 @@ alias vim=nvim
 alias vi=nvim
 alias py=python3
 
-alias rm='rm -i'
-
 alias gs='git status'
 alias ga='git add .'
 alias gc='git commit -m'
@@ -49,3 +51,8 @@ alias gl='git pull'
 if [ -f "$HOME/.config/op/plugins.sh" ]; then
     source "$HOME/.config/op/plugins.sh"
 fi
+
+# Useful functions
+mkcd() {
+  mkdir -p "$1" && cd "$1"
+}
