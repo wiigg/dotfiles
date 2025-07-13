@@ -23,13 +23,7 @@ add_to_path() {
 add_to_path "/opt/homebrew/opt/make/libexec/gnubin"
 add_to_path "/opt/homebrew/opt/python@3.13/libexec/bin"
 add_to_path "/usr/local/smlnj/bin"
-add_to_path "/opt/homebrew/opt/ruby/bin"
 add_to_path "$HOME/.local/bin"
-add_to_path "$GEM_HOME/bin"
-
-# Ruby gem paths
-export GEM_HOME="/opt/homebrew/lib/ruby/gems/3.4.0"
-export GEM_PATH="/opt/homebrew/lib/ruby/gems/3.4.0"
 
 # Tcl/Tk env vars
 export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
@@ -39,7 +33,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
 # Aliases
 alias vim=nvim
 alias vi=nvim
-alias py=python3
+alias py=python
 
 alias gs='git status'
 alias ga='git add .'
