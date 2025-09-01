@@ -8,17 +8,13 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
+[[ -s "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"
 
 export EDITOR="nvim"
 
 # Paths
-add_to_path() {
-  case ":$PATH:" in
-    *":$1:"*) ;;
-    *) export PATH="$1:$PATH" ;;
-  esac
-}
+typeset -xU path
+add_to_path() { [[ -d $1 ]] && path=("$1" $path) }
 
 add_to_path "/opt/homebrew/opt/make/libexec/gnubin"
 add_to_path "/opt/homebrew/opt/python@3.13/libexec/bin"
@@ -26,9 +22,12 @@ add_to_path "/usr/local/smlnj/bin"
 add_to_path "$HOME/.local/bin"
 
 # Tcl/Tk env vars
-export LDFLAGS="-L/usr/local/opt/tcl-tk/lib"
-export CPPFLAGS="-I/usr/local/opt/tcl-tk/include"
-export PKG_CONFIG_PATH="/usr/local/opt/tcl-tk/lib/pkgconfig"
+if command -v brew >/dev/null; then
+  tk_prefix="$(brew --prefix tcl-tk)"
+  export LDFLAGS="-L${tk_prefix}/lib"
+  export CPPFLAGS="-I${tk_prefix}/include"
+  export PKG_CONFIG_PATH="${tk_prefix}/lib/pkgconfig"
+fi
 
 # Aliases
 alias vim=nvim
