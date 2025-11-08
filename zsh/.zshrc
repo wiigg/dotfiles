@@ -17,7 +17,7 @@ typeset -xU path
 add_to_path() { [[ -d $1 ]] && path=("$1" $path) }
 
 add_to_path "/opt/homebrew/opt/make/libexec/gnubin"
-add_to_path "/opt/homebrew/opt/python@3.13/libexec/bin"
+add_to_path "/opt/homebrew/bin/python3"
 add_to_path "/usr/local/smlnj/bin"
 add_to_path "$HOME/.local/bin"
 
@@ -32,6 +32,7 @@ fi
 # Aliases
 alias vim=nvim
 alias vi=nvim
+alias python=python3
 alias py=python
 
 alias gs='git status'
