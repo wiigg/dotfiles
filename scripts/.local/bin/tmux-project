@@ -2,7 +2,7 @@
 
 if [[ -x "./.tmux-project" ]]; then
 	./.tmux-project
-elif [[ -x "$HOME/.tmux-projecct" ]]; then
+elif [[ -x "$HOME/.tmux-project" ]]; then
 	"$HOME/.tmux-project"
 fi
 clear
