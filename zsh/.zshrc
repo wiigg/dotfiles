@@ -36,7 +36,8 @@ alias python=python3
 alias py=python
 
 alias gs='git status'
-alias ga='git add .'
+alias ga='git add -A'
+alias gap='git add -p'
 alias gc='git commit -m'
 alias gp='git push'
 alias gl='git pull'
