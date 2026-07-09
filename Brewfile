@@ -1,0 +1,12 @@
+brew "fd"
+brew "fzf"
+brew "make"
+brew "neovim"
+brew "ripgrep"
+brew "stow"
+brew "tcl-tk"
+brew "tmux"
+brew "tree-sitter"
+
+cask "1password"
+cask "1password-cli"

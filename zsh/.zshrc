@@ -17,7 +17,6 @@ typeset -xU path
 add_to_path() { [[ -d $1 ]] && path=("$1" $path) }
 
 add_to_path "/opt/homebrew/opt/make/libexec/gnubin"
-add_to_path "/opt/homebrew/bin/python3"
 add_to_path "/usr/local/smlnj/bin"
 add_to_path "$HOME/.local/bin"
 
